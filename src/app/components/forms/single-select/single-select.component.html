@@ -1,0 +1,16 @@
+<div class="form-check" [class.text-success]="correct && disabled" [class.text-danger]="!correct && disabled && selected">
+  <input
+    [name]="name"
+    class="form-check-input"
+    type="radio"
+    [value]="value"
+    [id]="id"
+    [checked]="checked"
+    [disabled]="disabled"
+  />
+  <label class="form-check-label fw-medium d-flex align-items-center" [for]="id">
+    {{ value }}
+    <i *ngIf="correct && disabled && selected" class="mx-2 fw-bold fs-4 text-success menu-icon tf-icons bx bx-check bx-tada-hover"></i>
+    <i *ngIf="!correct && disabled && selected" class="mx-2 fw-bold fs-4 text-danger menu-icon tf-icons bx bx-x bx-tada-hover"></i>
+  </label>
+</div>

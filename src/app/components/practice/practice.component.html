@@ -1,0 +1,50 @@
+<ng-container>
+  <div class="row">
+    <div class="col-lg-4 mb-4 orders-0">
+      <label for="providers" class="form-label">Select provider</label>
+      <select
+        id="providers"
+        class="form-select form-select-lg"
+        (change)="handleExamDropdown($event)"
+      >
+        <option value="" selected>Please select a option</option>
+        <option *ngFor="let item of data" [value]="item.provider">
+          {{ item.provider }}
+        </option>
+      </select>
+    </div>
+    <div class="col-lg-4 mb-4 orders-1">
+      <label for="cert-exam" class="form-label">Select Exam</label>
+      <select
+        id="cert-exam"
+        class="form-select form-select-lg"
+        (change)="loadQuestions($event)"
+      >
+        <option value="" selected>Please select a option</option>
+        <option *ngFor="let exam of this.selectedExams" [value]="exam">
+          {{ exam }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <ng-container *ngIf="questionsData && questionsData.length > 0">
+    <form [formGroup]="quizForm" method="post" (submit)="onSubmit()">
+      <ng-container formArrayName="quizzes" *ngFor="let item of questionsData; let i = index">
+        <app-quiz
+          [id]="'quiz-' + i + 1"
+          [question]="item.question"
+          [questionNumber]="i + 1"
+          [images]="item.images"
+          [options]="item.options"
+          [correct]="item.correct"
+          [disabled]="false"
+        />
+      </ng-container>
+      <div class="row mt-3">
+        <div class="col-sm-12 d-flex justify-content-end">
+          <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </ng-container>
+</ng-container>
