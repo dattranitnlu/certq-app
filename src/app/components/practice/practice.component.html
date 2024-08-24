@@ -28,17 +28,67 @@
     </div>
   </div>
   <ng-container *ngIf="questionsData && questionsData.length > 0">
-    <form [formGroup]="quizForm" method="post" (submit)="onSubmit()">
-      <ng-container formArrayName="quizzes" *ngFor="let item of questionsData; let i = index">
-        <app-quiz
-          [id]="'quiz-' + i + 1"
-          [question]="item.question"
-          [questionNumber]="i + 1"
-          [images]="item.images"
-          [options]="item.options"
-          [correct]="item.correct"
-          [disabled]="false"
-        />
+    <form [formGroup]="quizForm" (submit)="onSubmit()">
+      <ng-container formArrayName="quizzes">
+        <ng-container
+          *ngFor="let quiz of quizzes.controls; let i = index"
+          [formGroupName]="i"
+        >
+          <app-quiz
+            [id]="'quiz-' + i + 1"
+            [question]="quiz.get('question')?.value"
+            [questionNumber]="i + 1"
+            [images]="quiz.get('images')?.value"
+            [correct]="quiz.get('correct')?.value"
+            [disabled]="false"
+          >
+            <ng-container
+              *ngIf="
+                !isStringArray(quiz.get('correct')?.value);
+                else multiOption
+              "
+              formArrayName="options"
+            >
+              <ng-container
+                *ngFor="
+                  let option of quiz.get('options')?.value.controls;
+                  let j = index
+                "
+              >
+                <app-single-select
+                  [formControlName]="j"
+                  [id]="i + 1 + '-singleOption-' + j"
+                  [name]="i + 1"
+                  [value]="option.value"
+                  [checked]="false"
+                  [disabled]="false"
+                  [correct]="
+                    checkCorrectAnswer(quiz.get('correct')?.value, option.value)
+                  "
+                />
+              </ng-container>
+            </ng-container>
+            <ng-template #multiOption formArrayName="options">
+              <ng-container
+                *ngFor="
+                  let option of quiz.get('options')?.value.controls;
+                  let j = index
+                "
+              > {{option}}
+                <app-multi-select
+                  [formControlName]="j"
+                  [id]="i + 1 + '-multiOption-' + j"
+                  [value]="option.value"
+                  [checked]="false"
+                  [disabled]="false"
+                  [correct]="
+                    checkCorrectAnswer(quiz.get('correct')?.value, option.value)
+                  "
+                />
+              </ng-container>
+            </ng-template>
+          </app-quiz>
+        </ng-container>
       </ng-container>
       <div class="row mt-3">
         <div class="col-sm-12 d-flex justify-content-end">

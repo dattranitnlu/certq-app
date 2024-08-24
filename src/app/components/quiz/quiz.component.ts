@@ -16,7 +16,6 @@ export class QuizComponent {
   @Input() questionNumber: number | any = 0;
   @Input() question: string = '';
   @Input() images: string = '';
-  @Input() options: string | Array<string> | null | undefined = [];
   @Input() correct: string | Array<string> = [];
   @Input() disabled: boolean = true;
 

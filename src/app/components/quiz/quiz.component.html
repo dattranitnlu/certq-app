@@ -26,30 +26,7 @@
             <!-- Quiz-->
             <div class="row mt-3">
               <div class="col-sm-12">
-                <ng-container *ngIf="!isStringArray(correct); else multiOption">
-                  <ng-container *ngFor="let item of options; let i = index">
-                    <app-single-select
-                      [id]="questionNumber + '-singleOption-' + i"
-                      [name]="questionNumber"
-                      [value]="item"
-                      [checked]="false"
-                      [disabled]="disabled"
-                      [correct]="checkCorrectAnswer(item)"
-                    />
-                  </ng-container>
-                </ng-container>
-                <ng-template #multiOption>
-                  <ng-container *ngFor="let item of options; let i = index">
-                    <app-multi-select
-                      [id]="questionNumber + '-multiOption-' + i"
-                      [value]="item"
-                      [checked]="false"
-                      [disabled]="disabled"
-                      [correct]="checkCorrectAnswer(item)"
-                      formControlName="answer"
-                    />
-                  </ng-container>
-                </ng-template>
+                <ng-content></ng-content>
               </div>
             </div>
 

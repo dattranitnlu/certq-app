@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
 import { CommonModule } from '@angular/common';
 import {
@@ -7,6 +7,7 @@ import {
   FormGroup,
   FormsModule,
   ReactiveFormsModule,
+  Validators,
 } from '@angular/forms';
 import {
   HttpClient,
@@ -54,6 +55,7 @@ interface Statement {
   ],
   templateUrl: './practice.component.html',
   styleUrl: './practice.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class PracticeComponent implements OnInit {
   data: Provider[] = [];
@@ -98,8 +100,13 @@ export class PracticeComponent implements OnInit {
         this.questionsData = this.getRandomQuestions(this.count, data);
         console.log('questionData = ', this.questionsData);
         this.quizForm = this.fb.group({
-          quizzes: this.fb.array(this.generateQuizFormGroups(this.questionsData)),
+          quizzes: this.fb.array(
+            this.generateQuizFormGroups(this.questionsData)
+          ),
         });
+
+        console.log('this.quizzes.controls[0].value.options = ', this.quizzes.controls[0].value.options);
+        
       },
       error: (error: HttpErrorResponse) => {
         if (error) this.router.navigate([pathUrl.commingSoon]);
@@ -132,8 +139,8 @@ export class PracticeComponent implements OnInit {
           question: [question.question],
           questionNumber: [question.questionNumber],
           images: [question.images],
-          options: [question.options],
-          correct: [question.correct],
+          options: this.generateFormArray(question),
+          correct: [question.correct, Validators.required],
         })
       );
     } else {
@@ -143,5 +150,40 @@ export class PracticeComponent implements OnInit {
 
   onSubmit(): void {
     console.log('data = ', this.quizForm);
+  }
+
+  get quizzes() {
+    return this.quizForm.controls['quizzes'] as FormArray;
+  }
+
+  isStringArray(value: any): boolean {
+    return Array.isArray(value);
+  }
+
+  checkCorrectAnswer(
+    correct: string | Array<string> = [],
+    input: string
+  ): boolean {
+    return correct.includes(input);
+  }
+
+  generateFormArray(question: Question): FormArray | undefined {
+    if (!question.options || typeof question.options === undefined) {
+      return this.fb.array([this.fb.control('')]);
+    }
+
+    if (question.options && question.options.length > 0) {
+      return this.fb.array(
+        [question.options.map((option) => {
+          if (!option) {
+            return;
+          }
+          
+          return this.fb.control(option);
+        })]
+      );
+    } else {
+      return this.fb.array([this.fb.control('')]);
+    }
   }
 }
