@@ -1,23 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { SingleSelectComponent } from '../forms/single-select/single-select.component';
-import { MultiSelectComponent } from '../forms/multi-select/multi-select.component';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule, SingleSelectComponent, MultiSelectComponent],
+  imports: [CommonModule],
   templateUrl: './quiz.component.html',
   styleUrl: './quiz.component.css'
 })
 export class QuizComponent {
   @Input() id: string = 'quiz-zero';
-  @Input() questionNumber: number | any = 0;
+  @Input() questionNumber: number | undefined = 0;
   @Input() question: string = '';
   @Input() images: string = '';
   @Input() correct: string | Array<string> = [];
   @Input() disabled: boolean = true;
+  @Input() isPA: boolean = true;
 
   quizFormGroup: FormGroup;
 

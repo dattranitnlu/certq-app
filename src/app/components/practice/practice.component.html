@@ -44,17 +44,17 @@
           >
             <ng-container
               *ngIf="
-                !isStringArray(quiz.get('correct')?.value);
-                else multiOption
+                !isStringArray(quiz.get('correct')?.value) && quiz.get('options');
               "
               formArrayName="options"
             >
               <ng-container
                 *ngFor="
-                  let option of quiz.get('options')?.value.controls;
+                  let option of getOptions(i)?.controls;
                   let j = index
                 "
               >
+              {{logAny(option.value) }}
                 <app-single-select
                   [formControlName]="j"
                   [id]="i + 1 + '-singleOption-' + j"
@@ -68,25 +68,7 @@
                 />
               </ng-container>
             </ng-container>
-            <ng-template #multiOption formArrayName="options">
-              <ng-container
-                *ngFor="
-                  let option of quiz.get('options')?.value.controls;
-                  let j = index
-                "
-              > {{option}}
-                <app-multi-select
-                  [formControlName]="j"
-                  [id]="i + 1 + '-multiOption-' + j"
-                  [value]="option.value"
-                  [checked]="false"
-                  [disabled]="false"
-                  [correct]="
-                    checkCorrectAnswer(quiz.get('correct')?.value, option.value)
-                  "
-                />
-              </ng-container>
-            </ng-template>
+
           </app-quiz>
         </ng-container>
       </ng-container>

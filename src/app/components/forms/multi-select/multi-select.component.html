@@ -1,5 +1,6 @@
 <div class="form-check" [class.text-success]="correct && disabled">
   <input
+    [formControlName]="formControlName"
     class="form-check-input"
     type="checkbox"
     [value]="value"

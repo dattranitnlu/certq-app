@@ -8,6 +8,7 @@
         "C. Its stock price has slipped due to a false rumor.",
         "D. It was involved in a multi-million dollar transaction recently."
     ],
+    "images": "assets/images/english/171-175.png",
     "correct": "D. It was involved in a multi-million dollar transaction recently."
 },
 {
@@ -51,7 +52,7 @@
     "correct": "D. There are many details to be worked out."
 },
 {
-	"title": "Sports Today",
+	  "title": "Sports Today",
     "question": "Question 167. What is Mr. Bridges' main purpose in writing this letter?",
     "options": [
         "A. To thank the customer for subscribing to their magazine",
@@ -59,6 +60,7 @@
         "C. To renew the subscription for another year",
         "D. To provide an answer to an inquiry the customer had made"
     ],
+    "images": "assets/images/english/167-171.png",
     "correct": "D. To provide an answer to an inquiry the customer had made"
 },
 {
@@ -110,6 +112,7 @@
         "C. To thank employees for their support in the work",
         "D. To prepare for an unexpected shipment delay"
     ],
+    "images": "assets/images/english/161-164.png",
     "correct": "B. To provide a timetable for some office renovation work"
 },
 {
@@ -151,6 +154,7 @@
         "C. The new spending budget for GEM Computer’s R&D Department",
         "D. The selling of a struggling division of GEM Computers"
     ],
+    "images": "assets/images/english/168-170.png",
     "correct": "D. The selling of a struggling division of GEM Computers"
 },
 {
@@ -182,6 +186,7 @@
         "C. A time limit is placed on items being returned.",
         "D. A full refund will be provided for all items if returned within 24 hours."
     ],
+    "images": "assets/images/english/165-167.png",
     "correct": "D. A full refund will be provided for all items if returned within 24 hours."
 },
 {
@@ -213,6 +218,7 @@
         "C. Mr. Chow",
         "D. Mr. Mills"
     ],
+    "images": "assets/images/english/164-166.png",
     "correct": "B. Mr. Lee"
 },
 {
@@ -244,6 +250,7 @@
         "C. Health insurance",
         "D. A car"
     ],
+    "images": "assets/images/english/153-154.png",
     "correct": "D. A car"
 },
 {	
@@ -265,6 +272,7 @@
         "C. The sale period will last for two months.",
         "D. The discounts will only be available to premier members."
     ],
+    "images": "assets/images/english/153-154(2).png",
     "correct": "B. The price of items in the store will be slashed roughly by one third."
 },
 {
@@ -286,6 +294,7 @@
         "C. Mr. Williams felt that the price was very unreasonable.",
         "D. Mr. Williams thought the menu selection needs were limited."
     ],
+    "images": "assets/images/english/159-160.png",
     "correct": "C. Mr. Williams felt that the price was very unreasonable."
 },
 {
@@ -307,6 +316,7 @@
       "C. Spending had to be reduced.",
       "D. Some money was lost."
     ],
+    "images": "assets/images/english/163-164.png",
     "correct": "C. Spending had to be reduced."
   },
   {
@@ -328,6 +338,7 @@
       "C. A restaurant",
       "D. A golf course"
     ],
+    "images": "assets/images/english/153-154(3).png",
     "correct": "C. A restaurant"
   },
   {
@@ -349,6 +360,7 @@
       "C. To describe some brochure",
       "D. To reply to a letter"
     ],
+    "images": "assets/images/english/164-165.png",
     "correct": "B. To conduct a customer satisfaction survey"
   },
   {
@@ -370,6 +382,7 @@
       "C. 20 years",
       "D. 30 years"
     ],
+    "images": "assets/images/english/161-163.png",
     "correct": "C. 20 years"
   },
   {
@@ -401,6 +414,7 @@
       "C. To arrange an interview with an applicant",
       "D. To inform resignation"
     ],
+    "images": "assets/images/english/170-172.png",
     "correct": "D. To inform resignation"
   },
   {
@@ -432,6 +446,7 @@
       "C. To illustrate the problem of using a phone overseas",
       "D. To provide a list of travel guideline"
     ],
+    "images": "assets/images/english/170-172.png",
     "correct": "B. To outline the services of moving"
   },
   {
@@ -473,6 +488,7 @@
       "C. A playroom",
       "D. A fitness club"
     ],
+    "images": "assets/images/english/155-158.png",
     "correct": "D. A fitness club"
   },
   {
@@ -514,6 +530,7 @@
       "C. To ask employees to explain a recent disruption",
       "D. To inform about an interruption in computer service"
     ],
+    "images": "assets/images/english/26-30.png",
     "correct": "D. To inform about an interruption in computer service"
   },
   {
@@ -565,6 +582,7 @@
       "C. The weather would turn sunny as soon as the rain stopped",
       "D. The rain would last for the whole month."
     ],
+    "images": "assets/images/english/186-190.png",
     "correct": "B. The rainstorm would begin on Thursday morning."
   },
   {
@@ -616,6 +634,7 @@
       "C. Three weeks ago",
       "D. One year ago"
     ],
+    "images": "assets/images/english/186-190(2).png",
     "correct": "C. Three weeks ago"
   },
   {
@@ -667,6 +686,7 @@
       "C. By personal check",
       "D. By money order"
     ],
+    "images": "assets/images/english/196-200.png",
     "correct": "A. In cash only"
   },
   {
@@ -718,6 +738,7 @@
       "C. HR assistant",
       "D. Director"
     ],
+    "images": "assets/images/english/196-200(2).png",
     "correct": "C. HR assistant"
   },
   {
@@ -769,6 +790,7 @@
       "C. to respond to their enquiry",
       "D. to answer their complaint"
     ],
+    "images": "assets/images/english/191-195.png",
     "correct": "D. to answer their complaint"
   },
   {
@@ -820,6 +842,7 @@
       "C. to complain about the work being slow",
       "D. to hire Absolute Interior Design"
     ],
+    "images": "assets/images/english/186-190(3).png",
     "correct": "D. to hire Absolute Interior Design"
   },
   {
@@ -871,6 +894,7 @@
       "C. To inquire about the hotel's location",
       "D. To request an instructor for a training session"
     ],
+    "images": "assets/images/english/196-200(3).png",
     "correct": "A. To reserve a large meeting space"
   },
   {
@@ -922,6 +946,7 @@
       "C. To develop a new form of high-quality recycled paper",
       "D. To form a partnership with a North American company"
     ],
+    "images": "assets/images/english/186-190(4).png",
     "correct": "A. To become the supplier of paper products for a company"
   },
   {
@@ -973,6 +998,7 @@
       "C. $559",
       "D. $569"
     ],
+    "images": "assets/images/english/101-105.png",
     "correct": "C. $559"
   },
   {
@@ -1024,6 +1050,7 @@
       "C. April 16",
       "D. May 8"
     ],
+    "images": "assets/images/english/181-185.png",
     "correct": "C. April 16"
   },
   {
@@ -1075,6 +1102,7 @@
       "C. A home wireless phone connection",
       "D. A sale on PDAs"
     ],
+    "images": "assets/images/english/196-200(4).png",
     "correct": "B. A cellular phone plan"
   },
   {
@@ -1126,6 +1154,7 @@
       "C. To notify a customer of a payment made",
       "D. To solicit the magazine to get a new customer"
     ],
+    "images": "assets/images/english/1-5.png",
     "correct": "B. To remind someone of an upcoming subscription renewal"
   },
   {
@@ -1177,6 +1206,7 @@
       "C. Its first office is due to have its grand opening in Hong Kong.",
       "D. It does business with neighboring countries."
     ],
+    "images": "assets/images/english/6-10.png",
     "correct": "B. Its plan includes expanding to other continents, including Asia."
   },
   {
@@ -1228,6 +1258,7 @@
       "C. noticeable",
       "D. unpaid"
     ],
+    "images": "assets/images/english/11-15.png",
     "correct": "D. unpaid"
   },
   {
@@ -1279,6 +1310,7 @@
       "C. To inquire about a company's services",
       "D. To correct an earlier communication"
     ],
+    "images": "assets/images/english/176-180.png",
     "correct": "D. To correct an earlier communication"
   },
   {
@@ -1330,6 +1362,7 @@
       "C. In a paper's classified section",
       "D. In a company newsletter"
     ],
+    "images": "assets/images/english/196-200(5).png",
     "correct": "C. In a paper's classified section"
   },
   {
@@ -1381,6 +1414,7 @@
       "C. To apply for a discount",
       "D. To request a refund"
     ],
+    "images": "assets/images/english/191-195(2).png",
     "correct": "A. To report a billing error"
   },
   {
@@ -1432,6 +1466,7 @@
       "C. An advertising company",
       "D. A discount outlet store"
     ],
+    "images": "assets/images/english/186-190(5).png",
     "correct": "D. A discount outlet store"
   },
   {
@@ -1483,6 +1518,7 @@
     "C. Professionals in need of paper products",
     "D. Travelers in New England"
   ],
+  "images": "assets/images/english/196-200(6).png",
   "correct": "A. Jobseekers with experience in sales"
 },
 {
@@ -1534,6 +1570,7 @@
       "C. Through a website",
       "D. Through a mailing"
     ],
+    "images": "assets/images/english/176-180(2).png",
     "correct": "A. Through a friend"
   },
   {
@@ -1585,6 +1622,7 @@
       "C. To give customers a discount coupon",
       "D. To reward clients who recently made a purchase"
     ],
+    "images": "assets/images/english/186-190(6).png",
     "correct": "C. To give customers a discount coupon"
   },
   {
@@ -1636,6 +1674,7 @@
       "C. Pay for the labor on it",
       "D. Show a proof of purchase"
     ],
+    "images": "assets/images/english/1-5(2).png",
     "correct": "D. Show a proof of purchase"
   },
   {
@@ -1687,6 +1726,7 @@
       "C. To purchase a new fan belt",
       "D. To have his tires changed"
     ],
+    "images": "assets/images/english/1-5(3).png",
     "correct": "D. To have his tires changed"
   },
   {
@@ -1738,6 +1778,7 @@
       "C. A higher gross national product",
       "D. A natural disaster in a foreign country"
     ],
+    "images": "assets/images/english/178-180.png",
     "correct": "D. A natural disaster in a foreign country"
   },
   {
@@ -1769,6 +1810,7 @@
       "C. Because she wanted to cancel her payment",
       "D. Because she was charged twice for the same order"
     ],
+    "images": "assets/images/english/191-195(3).png",
     "correct": "B. Because she never received what she ordered"
   },
   {
@@ -1820,6 +1862,7 @@
       "C. To warn the students about other bad students",
       "D. To tell the students how to get into the residence"
     ],
+    "images": "assets/images/english/181-185(2).png",
     "correct": "B. To establish a basic set of ground rules"
   },
   {
@@ -1872,6 +1915,7 @@
       "C. New employees will participate in group activities.",
       "D. Staff members will check the list by the front entrance."
     ],
+    "images": "assets/images/english/172-175.png",
      "correct": "A. Participants will enjoy some Chinese cuisine."
   },
   {

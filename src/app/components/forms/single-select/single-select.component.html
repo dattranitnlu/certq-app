@@ -7,6 +7,7 @@
     [id]="id"
     [checked]="checked"
     [disabled]="disabled"
+    (change)="onSelect(value)"
   />
   <label class="form-check-label fw-medium d-flex align-items-center" [for]="id">
     {{ value }}

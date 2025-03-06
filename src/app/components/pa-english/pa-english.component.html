@@ -1,0 +1,58 @@
+<ng-container>
+  <!-- <div class="row">
+    <div class="col-lg-4 mb-4 orders-0">
+      <label for="providers" class="form-label">Practice</label>
+    </div>
+  </div> -->
+  <ng-container *ngIf="questionsData && questionsData.length > 0">
+    <form [formGroup]="quizForm" (ngSubmit)="onSubmit()">
+      <ng-container formArrayName="quizzes">
+        <ng-container
+          *ngFor="let quiz of quizzes.controls; let i = index"
+          [formGroupName]="i"
+        >
+          <app-quiz
+            [id]="'quiz-' + (i + 1)"
+            [question]="questionsData.at(i)?.question || ''"
+            [questionNumber]="i + 1"
+            [images]="questionsData.at(i)?.images || ''"
+            [correct]="questionsData.at(i)?.correct || ''"
+            [disabled]="false"
+          >
+            <ng-container *ngIf="questionsData.at(i)?.options" quiz>
+              <ng-container
+                *ngFor="
+                  let optionData of questionsData.at(i)?.options;
+                  let j = index
+                "
+              >
+                <app-single-select
+                  formControlName="option"
+                  [id]="i + 1 + '-singleOption-' + j"
+                  [value]="optionData"
+                  [checked]="fillForm"
+                  [disabled]="disableForm"
+                  [name]="questionsData.at(i)?.question"
+                  [correct]="
+                    checkCorrectAnswer(
+                      questionsData.at(i)?.correct,
+                      questionsData.at(i)?.options?.at(j)
+                    )
+                  "
+                ></app-single-select>
+              </ng-container>
+            </ng-container>
+          </app-quiz>
+        </ng-container>
+      </ng-container>
+      <div class="row mt-3">
+        <div class="col-sm-12 d-flex justify-content-end">
+          <button type="submit" class="btn btn-outline-primary">Submit</button>
+          <ng-container *ngIf="disableForm && disableForm === true">
+            <button type="button" class="btn btn-light" (click)="onReset()">Reset</button>
+          </ng-container>
+        </div>
+      </div>
+    </form>
+  </ng-container>
+</ng-container>
