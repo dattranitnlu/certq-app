@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "perfect-scrollbar/css/perfect-scrollbar.css";
+@import "apexcharts-clevision/src/assets/apexcharts.css";
+@import "boxicons/css/boxicons.css";
+@import "assets/vendor/css/core.css";
+@import "assets/vendor/css/theme-default.css";

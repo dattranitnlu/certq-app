@@ -25,7 +25,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
+              "node_modules/apexcharts-clevision/src/assets/apexcharts.css",
+              "node_modules/boxicons/css/boxicons.css",
+              "src/assets/vendor/css/core.css",
+              "src/assets/vendor/css/theme-default.css"
             ],
             "scripts": []
           },
