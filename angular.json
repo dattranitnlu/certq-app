@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "exem-app": {
+    "certq-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/exem-app",
+            "outputPath": "dist/certq-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -32,7 +32,17 @@
               "src/assets/vendor/css/core.css",
               "src/assets/vendor/css/theme-default.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/config.js",
+              "src/assets/vendor/libs/jquery/jquery.js",
+              "src/assets/vendor/libs/popper/popper.js",
+              "src/assets/vendor/js/bootstrap.js",
+              "src/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js",
+              "src/assets/vendor/js/menu.js",
+              "src/assets/vendor/libs/apex-charts/apexcharts.js",
+              "src/assets/js/main.js",
+              "src/assets/js/dashboards-analytics.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -62,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "exem-app:build:production"
+              "buildTarget": "certq-app:build:production"
             },
             "development": {
-              "buildTarget": "exem-app:build:development"
+              "buildTarget": "certq-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "exem-app:build"
+            "buildTarget": "certq-app:build"
           }
         },
         "test": {
@@ -93,6 +103,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
