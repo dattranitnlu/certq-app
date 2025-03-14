@@ -1,0 +1,10 @@
+[
+  {
+    "provider": "Microsoft",
+    "exams": ["AI-102", "AZ-104"]
+  },
+  {
+    "provider": "Amazon",
+    "exams": ["ANS-C00"]
+  }
+]
