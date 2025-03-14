@@ -13,6 +13,7 @@ export const pathUrl = {
 };
 
 export const routes: Routes = [
+  { path: pathUrl.home, component: PaEnglishComponent },
   { path: pathUrl.pa_english, component: PaEnglishComponent },
   { path: pathUrl.practices, component: PracticeComponent },
   { path: pathUrl.notFound, component: NotFoundComponent },
