@@ -13,10 +13,10 @@ export const pathUrl = {
 };
 
 export const routes: Routes = [
-  { path: pathUrl.home, component: PaEnglishComponent },
+  { path: pathUrl.home, redirectTo: pathUrl.pa_english, pathMatch: 'full' },
   { path: pathUrl.pa_english, component: PaEnglishComponent },
   { path: pathUrl.practices, component: PracticeComponent },
   { path: pathUrl.notFound, component: NotFoundComponent },
   { path: pathUrl.commingSoon, component: CommingSoonComponent },
-  { path: '**', redirectTo: pathUrl.pa_english, pathMatch: 'full' }
+  { path: '**', component: NotFoundComponent }
 ];
