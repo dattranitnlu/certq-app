@@ -72,7 +72,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "build:production"
+              "buildTarget": "certq-app:build:production"
             },
             "development": {
               "buildTarget": "certq-app:build:development"
