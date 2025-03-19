@@ -31,5 +31,5 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "include": ["src/**/*", "src/types/sweetalert2.d.ts"]
+  "include": ["src/**/*", "src/types/sweetalert2.d.ts", "src/types/typings.d.ts"]
 }
