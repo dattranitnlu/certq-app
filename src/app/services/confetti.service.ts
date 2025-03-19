@@ -10,13 +10,13 @@ export class ConfettiService {
 
   celebrate() {
     const duration = 2800; // in milliseconds
-  
+
     confetti({
       particleCount: 150,
       spread: 160,
       origin: { y: 0.6 },
     });
-  
+
     // Clear confetti after a certain duration
     setTimeout(() => confetti.reset(), duration);
   }
