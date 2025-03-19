@@ -3,7 +3,7 @@ export interface CertObject {
   url: string;
 }
 
-export const PREFIX_PATH = '/assets/data';
+export const PREFIX_PATH = './assets/data';
 export const PROVIDER_DATA_API = `${PREFIX_PATH}/providers.json`;
 
 export const CERT_API_LIST: CertObject[] = [
