@@ -77,7 +77,7 @@ export class PaEnglishComponent {
         this.questionsData.push(...data);
         const newGroups = this.generateQuizFormGroups(data);
         newGroups.forEach((group: any) => this.quizzes.push(group));
-        
+
       },
       error: (error: HttpErrorResponse) => {
         if (error) this.router.navigate([pathUrl.commingSoon]);
@@ -181,18 +181,18 @@ export class PaEnglishComponent {
   calculateScore(): number {
     let correctCount = 0;
     const quizzes = this.quizForm.get('quizzes') as FormArray;
-    
-    
+
+
     quizzes.controls.forEach((quiz: any) => {
       const correctAnswer: string = quiz.value.correct;
       const selectedAnswer: string = quiz.value.option;
-      
+
       if (selectedAnswer === correctAnswer) {
         correctCount++;
       }
-      
+
     });
-  
+
     return correctCount;
   }
 }
